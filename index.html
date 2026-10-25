@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple JavaScript profile editor by Zhanserik Zharylgassyn, IT-2501.">
+  <title>Profile Lab | Zhanserik Zharylgassyn</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <a class="brand" href="./" aria-label="Profile Lab home"><span class="brand-mark" aria-hidden="true">p.</span> profile lab<span class="brand-dot">/</span></a>
+      <span class="assignment">WEB TECHNOLOGIES <span aria-hidden="true">&nbsp; / &nbsp;</span> ASSIGNMENT 05</span>
+    </header>
+
+    <main>
+      <div class="intro">
+        <div>
+          <p class="eyebrow"><span class="status-dot"></span> A LITTLE JAVASCRIPT, A LITTLE YOU</p>
+          <h1>Your profile.<br><span>Made interactive.</span></h1>
+          <p class="intro-text">A small space to introduce yourself, do the math,<br class="desktop-break"> and keep a list of things you love.</p>
+        </div>
+        <div class="intro-note"><span aria-hidden="true">{ js }</span><p>Objects, events &amp;<br>the everyday DOM.</p></div>
+      </div>
+
+      <div class="workspace">
+        <section class="card profile-card" aria-labelledby="profile-heading">
+          <div class="card-heading"><p class="eyebrow">01 / THE PROFILE</p><span class="pill">LIVE PREVIEW</span></div>
+          <div class="person">
+            <div class="avatar" id="avatar" aria-hidden="true">ZZ</div>
+            <div><h2 id="profile-heading">Zhanserik Zharylgassyn</h2><p id="profile-description">Born in 2007 <span aria-hidden="true">·</span> Developer</p></div>
+          </div>
+          <div class="stats" id="calculations">
+            <div><span class="stat-number" id="age">—</span><span class="stat-label">YEARS OLD</span></div>
+            <div><span class="stat-number" id="months">—</span><span class="stat-label">MONTHS APPROX.</span></div>
+            <div><span class="stat-number" id="hobby-count">3</span><span class="stat-label">HOBBIES</span></div>
+          </div>
+          <p class="calculation" id="calculation"></p>
+          <div class="profile-bottom"><span class="status-dot"></span> Built from one JavaScript object.</div>
+        </section>
+
+        <section class="card edit-card" aria-labelledby="edit-heading">
+          <p class="eyebrow">02 / MAKE IT YOURS</p>
+          <h2 id="edit-heading">A quick introduction.</h2>
+          <p class="card-description">Change the details. Watch your profile update.</p>
+          <form id="profile-form">
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" value="Zhanserik Zharylgassyn" placeholder="Your name" required maxlength="50">
+            <label for="birth-year">Birth year</label>
+            <input id="birth-year" name="birthYear" type="number" value="2007" min="1900" step="1" required aria-describedby="birth-hint">
+            <p class="field-hint" id="birth-hint">Used to calculate your age. Try a different year.</p>
+            <button class="primary-button" type="submit">Create / Update Profile <span aria-hidden="true">↗</span></button>
+          </form>
+          <p class="message" id="profile-message" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="card hobbies-card" aria-labelledby="hobbies-heading">
+          <div class="hobbies-top"><div><p class="eyebrow">03 / THE GOOD STUFF</p><h2 id="hobbies-heading">Things I like doing.</h2><p class="card-description">A growing list of interests, one item at a time.</p></div><span class="list-count" id="list-count">03 ITEMS</span></div>
+          <ul id="hobby-list" class="hobby-list"></ul>
+          <p class="empty-state" id="empty-state" hidden>Your list is empty. Add something you enjoy.</p>
+          <form id="hobby-form" class="hobby-form">
+            <div class="hobby-field"><label for="hobby-input">New hobby</label><input id="hobby-input" name="hobby" type="text" placeholder="e.g. Photography" required maxlength="60"></div>
+            <button class="primary-button add-button" type="submit"><span aria-hidden="true">+</span> Add Item</button>
+            <button class="secondary-button" id="remove-item" type="button">Remove Item <span aria-hidden="true">−</span></button>
+          </form>
+          <div class="hobby-bottom"><p class="message" id="hobby-message" role="status" aria-live="polite"></p><span>Remove Item deletes the last hobby.</span></div>
+        </section>
+      </div>
+      <p class="session-note">Just a practice space. Changes reset when you refresh.</p>
+    </main>
+
+    <footer><p>Zhanserik Zharylgassyn <span>/ IT-2501</span></p><p>HTML <span>+</span> CSS <span>+</span> JavaScript</p></footer>
+  </div>
+</body>
+</html>

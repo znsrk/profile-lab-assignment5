@@ -1,0 +1,30 @@
+# Local screenshot and verification tools (keep the actual README images).
+/scripts/
+/capture-screenshots.*
+/screenshot.*
+/screenshots.*
+/test-results/
+/playwright-report/
+
+# Dependencies and generated files.
+/node_modules/
+/dist/
+/.cache/
+__pycache__/
+*.pyc
+*.log
+
+# Local settings and credentials.
+.env
+.env.*
+!.env.example
+/.openai/
+/.codex/
+/.agents/
+/.vscode/
+/.idea/
+
+# Operating system files.
+.DS_Store
+Thumbs.db
+Desktop.ini
