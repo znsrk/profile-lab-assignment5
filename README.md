@@ -1,8 +1,8 @@
-# Profile Lab — Assignment 5
+# Profile Lab - Assignment 5
 
 **Name:** Zhanserik Zharylgassyn  
 **Group:** IT-2501  
-**Topic:** JavaScript Basics — DOM Manipulation & Events
+**Topic:** JavaScript Basics - DOM Manipulation & Events
 
 A small profile editor built with plain HTML, CSS, and JavaScript. Update a name and birth year, see calculated values, and add or remove hobbies. No frameworks, installation, or build step.
 
